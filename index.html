@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NeoRex — Soporte</title>
   <meta name="description" content="NeoRex app de gestión de taller. Órdenes, inventario, clientes y sucursales todo en una misma app."/>
+
+  <!-- ✅ GitHub Pages: rutas relativas -->
   <link rel="stylesheet" href="./styles.css" />
-  
-  <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- ✅ Favicons (rutas relativas) -->
+  <link rel="icon" href="./favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
 </head>
+
 <body class="bg-orbs">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="header">
     <div class="container nav nav--center">
       <a class="brand" href="./index.html">
-        <img src="logo_mark.png" alt="Logo de NeoRex" />
+        <!-- ✅ ruta relativa -->
+        <img src="./logo_mark.png" alt="Logo de NeoRex" />
         <div class="title">
           <strong>NeoRex</strong>
           <span>Soporte y contacto oficial</span>
@@ -62,10 +67,11 @@
         </div>
 
         <aside class="panel panel-center" aria-label="NeoRex">
-  <div class="illu illu-center">
-    <img src="logo.png" alt="Logo de NeoRex" />
-  </div>
-</aside>
+          <div class="illu illu-center">
+            <!-- ✅ ruta relativa -->
+            <img src="./logo.png" alt="Logo de NeoRex" />
+          </div>
+        </aside>
       </section>
 
       <section class="section section-center" id="funciones">
@@ -125,9 +131,9 @@
             </div>
             <div class="kv" style="margin-top:10px;">
               <strong>Teléfono</strong>
-              <span>+52 899 116 0859 </span>
+              <span>+52 899 116 0859</span>
             </div>
-</div>
+          </div>
 
           <div class="panel panel-slim">
             <h3 style="margin:0 0 8px;">Política de Privacidad</h3>
@@ -153,37 +159,40 @@
   </main>
 
   <script>
-  // Año en footer
-  document.getElementById("y").textContent = new Date().getFullYear();
+    // Año en footer
+    document.getElementById("y").textContent = new Date().getFullYear();
 
-  // Resaltar navegación (anchors) cuando se seleccionan / al hacer scroll
-  (function () {
-    const nav = document.querySelector(".navlinks");
-    if (!nav) return;
+    // Resaltar navegación (anchors) cuando se seleccionan / al hacer scroll
+    (function () {
+      const nav = document.querySelector(".navlinks");
+      if (!nav) return;
 
-    const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
-    if (!links.length) return;
+      const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
+      if (!links.length) return;
 
-    const setActive = (hash) => {
-      links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === hash));
-    };
+      const setActive = (hash) => {
+        links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === hash));
+      };
 
-    links.forEach((a) => a.addEventListener("click", () => setActive(a.getAttribute("href"))));
+      links.forEach((a) => a.addEventListener("click", () => setActive(a.getAttribute("href"))));
 
-    const obs = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((e) => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible && visible.target && visible.target.id) setActive("#" + visible.target.id);
-      },
-      { rootMargin: "-45% 0px -55% 0px", threshold: [0.02, 0.08, 0.15] }
-    );
+      const obs = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter((e) => e.isIntersecting)
+            .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-    links.forEach((a) => {
-      const id = a.getAttribute("href").slice(1);
-      const el = document.getElementById(id);
-      if (el) obs.observe(el);
-    });
-  })();
-</script>
+          if (visible && visible.target && visible.target.id) setActive("#" + visible.target.id);
+        },
+        { rootMargin: "-45% 0px -55% 0px", threshold: [0.02, 0.08, 0.15] }
+      );
+
+      links.forEach((a) => {
+        const id = a.getAttribute("href").slice(1);
+        const el = document.getElementById(id);
+        if (el) obs.observe(el);
+      });
+    })();
+  </script>
 </body>
 </html>
