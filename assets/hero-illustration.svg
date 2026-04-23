@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#569AEA" stop-opacity=".40"/>
+      <stop offset="1" stop-color="#3060DF" stop-opacity=".28"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="white" stop-opacity=".14"/>
+      <stop offset="1" stop-color="white" stop-opacity=".06"/>
+    </linearGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="560" rx="26" fill="rgba(255,255,255,.04)"/>
+  <circle cx="180" cy="120" r="140" fill="#569AEA" opacity=".35" filter="url(#blur)"/>
+  <circle cx="720" cy="110" r="160" fill="#3060DF" opacity=".28" filter="url(#blur)"/>
+  <circle cx="690" cy="430" r="190" fill="#569AEA" opacity=".20" filter="url(#blur)"/>
+  <rect x="84" y="88" width="732" height="384" rx="22" fill="url(#card)" stroke="rgba(255,255,255,.18)"/>
+
+  <!-- Fake app UI -->
+  <rect x="120" y="130" width="260" height="46" rx="14" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.16)"/>
+  <rect x="120" y="196" width="260" height="46" rx="14" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.14)"/>
+  <rect x="120" y="262" width="260" height="46" rx="14" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.14)"/>
+  <rect x="120" y="328" width="260" height="46" rx="14" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.14)"/>
+
+  <rect x="420" y="130" width="360" height="244" rx="18" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.14)"/>
+  <rect x="450" y="160" width="300" height="22" rx="11" fill="rgba(255,255,255,.10)"/>
+  <rect x="450" y="200" width="260" height="16" rx="8" fill="rgba(255,255,255,.08)"/>
+  <rect x="450" y="230" width="280" height="16" rx="8" fill="rgba(255,255,255,.08)"/>
+  <rect x="450" y="260" width="220" height="16" rx="8" fill="rgba(255,255,255,.08)"/>
+  <rect x="450" y="300" width="170" height="38" rx="19" fill="url(#bg)"/>
+
+  <rect x="420" y="392" width="360" height="80" rx="18" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)"/>
+  <circle cx="458" cy="432" r="16" fill="url(#bg)"/>
+  <rect x="486" y="420" width="210" height="16" rx="8" fill="rgba(255,255,255,.08)"/>
+  <rect x="486" y="444" width="160" height="12" rx="6" fill="rgba(255,255,255,.06)"/>
+
+  <text x="118" y="112" fill="rgba(234,240,255,.85)" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="16">
+    NeoRex · Vista previa
+  </text>
+</svg>
